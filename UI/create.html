@@ -1,9 +1,121 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>create meetup</title>
-    </head>
-    <body>
+<html lang="en">
+  <head>
+    <title>Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" >
+
+  </head>
+  <body>
+    <div class="container">
+      
+        <div class="topnav">
+            <a class="active" href="#"> <p>Questioner</p></a>
+            <a class="topright" href="#"> <button class="btnnav" >logout</button></a>
+            <a class="topright" href="#"><button class="btnnav">Admin</button> </a>
+            <a class="topright" href="#" ><button class="btnnav" >Meetups</button> </a>
+            <a class="topright" href="#"><button class="btnnav" onclick="myFunction()" >Profile</button> </a>
+        </div>
+    
+    <div class="content">
+
+      <div class="column left">
+    
+        <div class="card" id="tog" >
+            <h3>Profile</h3>
+            <div class="pic">
+            
+            <i class="fa fa-user-circle-o" aria-hidden="true" ></i>
+            </div>
+            <div class="cont">
+                <h5><b>Admin</b></h5>
+                <h5>Email: john@testmail.com</h5>
+                <a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Account settings</a>
+                <h4><i class="fa fa-users" aria-hidden="true"></i>Meetups</h4> 
+                <ul>
+                    <a href="#"> <li>Music<i class="fa fa-music" aria-hidden="true"></i> </li></a>
+                    <a href="#"> <li>Local Dance</li></a>
+                    <a href="#"> <li>Drama</li></a>
+                    
+                </ul>
+                <a href="#"><h4><i class="fa fa-wrench" aria-hidden="true"></i> Manage Meetups</h4> </a>
+            </div>
+            </div>
+      </div>
+    
+      <div class="column right">
         
-    </body>
+            
+      </div>
+
+      </div>
+        <div class="column middle">
+            <div class="wrap">
+                <button class="createbtn" id="myBtn" >CREATE NEW MEETUP</button>
+                <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <form >
+                                
+                                <div class="field">
+                                  <h2 class="bottom">Create New Meetup</h2>
+                                  <input type="text" placeholder="Enter Name"  required>
+                                  <input type="text" placeholder="Enter Location"  required> 
+                                  <input type="date" placeholder="Enter Date"  required>
+                                  <button class="btn" type="submit">CREATE</button>
+                                </div>
+                    
+                              </form>
+                        </div>
+                      
+                      </div>
+            </div>
+            <div class="wrap">
+                <div style="overflow-x:auto;">
+                        <table>
+                          <tr>
+                            <th>Meetup</th>
+                            <th>Location</th>
+                            <th>Date</th>
+                            <th>Members</th>
+                            <th>Action</th>
+                          </tr>
+                          <tr>
+                            <td>Music</td>
+                            <td>Carnivore</td>
+                            <td>7th January 2019</td>
+                            <td>50</td>
+                            <td><button class="deletebtn" >DELETE</button> </td>
+
+                          </tr>
+                          <tr>
+                            <td>Local Dance</td>
+                            <td>Nairobi Cinema</td>
+                            <td>10th January 2019</td>
+                            <td>200</td>
+                            <td><button class="deletebtn" >DELETE</button> </td>
+                          </tr>
+                          <tr>
+                            <td>Comedy</td>
+                            <td>Kenya Cinema </td>
+                            <td>20th February 2019</td>
+                            <td>30</td>
+                            <td><button class="deletebtn" >DELETE</button> </td>
+                          </tr>
+                        </table>
+                      </div>
+                      </div>
+
+        </div>
+
+        <footer class="footer">
+                <p><strong> © Questioner 2019</b></strong> </p>
+        </footer>
+
+</div> 
+<script src="myscripts.js"></script>
+</body>
 </html>
