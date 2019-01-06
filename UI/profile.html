@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>profile</title>
+    <title>Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" >
+
   </head>
   <body>
     <div class="container">
       
         <div class="topnav">
-            <a class="active" href="#"> <b>Questioner</b></a>
-            <a class="topright" href="#">Logout</a>
-            <a class="topright" href="adminlogin.html">Admin</a>
-            <a class="topright" href="#" >Meetups</a>
-            <a class="topright" href="#">Users</a>
+            <a class="active" href="#"> <p>Questioner</p></a>
+            <a class="topright" href="#"> <button class="btnnav" >logout</button></a>
+            <a class="topright" href="adminlogin.html"><button class="btnnav">Admin</button> </a>
+            <a class="topright" href="#" ><button class="btnnav" >Meetups</button> </a>
+            <a class="topright" href="#"><button class="btnnav" onclick="myFunction()" >Profile</button> </a>
         </div>
     
     <div class="content">
 
       <div class="column left">
-        <div class="menu">
-          <h3>My Profile</h3>
-
-        <div class="card">
+    
+        <div class="card" id="tog" >
+            <h3>Profile</h3>
             <div class="pic">
+            
             <i class="fa fa-user-circle-o" aria-hidden="true" ></i>
             </div>
             <div class="cont">
-                <h3><b>John Doe</b></h3>
+                <h5><b>John Doe</b></h5>
                 <h5>Username:Johndoe</h5>
                 <h5>Email: john@testmail.com</h5>
                <a href="#"><h4> <i class="fa fa-question" aria-hidden="true"></i> My Questions</h4> </a>
@@ -42,9 +43,7 @@
                     
                 </ul>
             </div>
-        </div>
-          
-       </div> 
+            </div>
       </div>
     
       <div class="column right">
@@ -54,7 +53,24 @@
 
       </div>
         <div class="column middle">
-            <h2 class="quis"> <i class="fa fa-question-circle-o" aria-hidden="true"></i><i class="fa fa-comments-o" aria-hidden="true"></i> Top Questions Feed<a href="question.html"><button class="button" style="float:right">Ask Question</button></a></h2>
+            <h2 class="quis"> <i class="fa fa-question-circle-o" aria-hidden="true"></i><i class="fa fa-comments-o" aria-hidden="true"></i> Top Questions Feed<button class="button" onclick="asd(1)">Ask Question</button></a></h2>
+            <form id="asd" action="" method="">
+                    <div class="field">
+                        <label>Choose Meetup group you want to post a question to</label>
+                        <select>
+                            <option value="volvo">Music</option>
+                            <option value="saab">Local Dance</option>
+                            <option value="opel">Drama</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                            <textarea class="textinput" placeholder="Type your question here...." ></textarea>
+                    </div>
+                    <div class="field">
+                    <button class="button" >POST</button>
+                    </div>
+                 
+                </form> 
     
             <hr>
             <ul>
@@ -62,64 +78,116 @@
                 <div class="icons">
                 3 <button><i class="fa fa-thumbs-o-up"></i></button> 
                 0 <button><i class="fa fa-thumbs-o-down"></i></button>
-                3 <i class="fa fa-comment-o" aria-hidden="true"> comments</i>
+                3 <button onclick="comment(1)" > <i class="fa fa-comment-o" aria-hidden="true"> comments</i></button>
                 </li>
                 <ul class="comment">
                     <li>Lorem ipsum dolor sit amet, est id habemus iracundia, ex veri elitr nostro qui. At per postea labitur. Quodsi maluisset et vix, delenit reprimique et eum. Cu sint doctus oblique vel, et sed volutpat consectetuer, per eius explicari eu. Ferri nusquam incorrupte pro at, pri platonem honestatis ea, in detraxit convenire duo. Cu sanctus meliore salutatus quo, eos purto choro utamur ne, integre legimus percipit sea ut..Ken 20/12/2018 1:30pm</li>
                 </ul> 
+                
+                <form id="comment" action="" method="">
+                        
+                        <div class="field">
+                                <textarea class="textinput" placeholder="Type your comment here...." ></textarea>
+                        </div>
+                        <div class="field">
+                        <button class="button">POST</button>
+                        </div>
+                     
+                    </form>
+    
             <hr>
                 
                 <li>Lorem Ipsum dolar sit amet ? <a href="#">Drama Meetup</a>
                 <div class="icons">
                 2 <button><i class="fa fa-thumbs-o-up"></i></button> 
                 1 <button><i class="fa fa-thumbs-o-down"></i></button>
-                2 <i class="fa fa-comment-o" aria-hidden="true"> comments</i>
+                2 <button onclick="comment1(1)" ><i class="fa fa-comment-o" aria-hidden="true"> comments</i></button>
                 </div>
                 </li>
                     <ul class="comment">
-                        <li>Lorem ipsum dolor sit amet, est id habemus iracundia, ex veri elitr nostro qui. At per postea labitur. Quodsi maluisset et vix, delenit reprimique et eum. Cu sint doctus oblique vel, et sed volutpat consectetuer, per eius explicari eu. Ferri nusquam incorrupte pro at, pri platonem honestatis ea, in detraxit convenire duo. Cu sanctus meliore salutatus quo, eos purto choro utamur ne, integre legimus percipit sea ut..Ken 20/12/2018 1:30pm</li>
+                         <li>Lorem ipsum dolor sit amet, est id habemus iracundia, ex veri elitr nostro qui. At per postea labitur. Quodsi maluisset et vix, delenit reprimique et eum. Cu sint doctus oblique vel, et sed volutpat consectetuer, per eius explicari eu. Ferri nusquam incorrupte pro at, pri platonem honestatis ea, in detraxit convenire duo. Cu sanctus meliore salutatus quo, eos purto choro utamur ne, integre legimus percipit sea ut..Ken 20/12/2018 1:30pm</li>
                     </ul> 
+                    <form id="comment1" action="" method="">
+                        
+                            <div class="field">
+                                    <textarea class="textinput" placeholder="Type your comment here...." ></textarea>
+                            </div>
+                            <div class="field">
+                            <button class="button">POST</button>
+                            </div>
+                         
+                        </form>
             <hr>
                 
                 <li>Lorem Ipsum dolar sit amet ? <a href="#">Music</a>
                     <div class="icons" >
                         3 <button><i class="fa fa-thumbs-o-up"></i></button> 
                         0 <button><i class="fa fa-thumbs-o-down"></i></button>
-                        1 <i class="fa fa-comment-o" aria-hidden="true"> comments</i>
+                        1 <button onclick="comment2(1)" > <i class="fa fa-comment-o" aria-hidden="true"> comments</i></button>
                     </div>
                 </li>
                     <ul class="comment">
                         <li>Lorem ipsum dolor sit amet, est id habemus iracundia, ex veri elitr nostro qui. At per postea labitur. Quodsi maluisset et vix, delenit reprimique et eum. Cu sint doctus oblique vel, et sed volutpat consectetuer, per eius explicari eu. Ferri nusquam incorrupte pro at, pri platonem honestatis ea, in detraxit convenire duo. Cu sanctus meliore salutatus quo, eos purto choro utamur ne, integre legimus percipit sea ut..Ken 20/12/2018 1:30pm</li>
                     </ul> 
+                    <form id="comment2" action="" method="">
+                        
+                            <div class="field">
+                                    <textarea class="textinput" placeholder="Type your comment here...." ></textarea>
+                            </div>
+                            <div class="field">
+                            <button class="button">POST</button>
+                            </div>
+                         
+                        </form>
             <hr>
                 
                     <li>Lorem Ipsum dolar sit amet ? <a href="#">Local Dance Meetup</a>
                         <div class="icons" >
                         0 <button><i class="fa fa-thumbs-o-up"></i></button> 
                         0 <button><i class="fa fa-thumbs-o-down"></i></button>
-                        3 <i class="fa fa-comment-o" aria-hidden="true"> comments</i>
+                        3 <button onclick="comment3(1)"> <i class="fa fa-comment-o" aria-hidden="true"> comments</i></buttton>
                          </div>
                     </li>
                         <ul class="comment">
                             <li>Lorem ipsum dolor sit amet, est id habemus iracundia, ex veri elitr nostro qui. At per postea labitur. Quodsi maluisset et vix, delenit reprimique et eum. Cu sint doctus oblique vel, et sed volutpat consectetuer, per eius explicari eu. Ferri nusquam incorrupte pro at, pri platonem honestatis ea, in detraxit convenire duo. Cu sanctus meliore salutatus quo, eos purto choro utamur ne, integre legimus percipit sea ut..Ken 20/12/2018 1:30pm</li>
                         </ul>
+                        <form id="comment3" action="" method="">
+                        
+                                <div class="field">
+                                        <textarea class="textinput" placeholder="Type your comment here...." ></textarea>
+                                </div>
+                                <div class="field">
+                                <button class="button">POST</button>
+                                </div>
+                             
+                            </form>
             <hr>
                 <li>Lorem Ipsum dolar sit amet ? <a href="#">Music Meetup</a>
                         <div class="icons" >
                         5 <button><i class="fa fa-thumbs-o-up"></i></button> 
                         3 <button><i class="fa fa-thumbs-o-down"></i></button>
-                        4 <i class="fa fa-comment-o" aria-hidden="true"> comments</i>
+                        4 <button onclick="comment4(1)" > <i class="fa fa-comment-o" aria-hidden="true"> comments</i></button>
                         </div>
                 </li>
                         <ul class="comment">
                             <li>Lorem ipsum dolor sit amet, est id habemus iracundia, ex veri elitr nostro qui. At per postea labitur. Quodsi maluisset et vix, delenit reprimique et eum. Cu sint doctus oblique vel, et sed volutpat consectetuer, per eius explicari eu. Ferri nusquam incorrupte pro at, pri platonem honestatis ea, in detraxit convenire duo. Cu sanctus meliore salutatus quo, eos purto choro utamur ne, integre legimus percipit sea ut..Ken 20/12/2018 1:30pm</li>
                         </ul>
+                        <form id="comment4" action="" method="">
+                        
+                                <div class="field">
+                                        <textarea class="textinput" placeholder="Type your comment here...." ></textarea>
+                                </div>
+                                <div class="field">
+                                <button class="button">POST</button>
+                                </div>
+                             
+                            </form>
             <hr> 
                 <li>Lorem Ipsum dolar sit amet ? <a href="#">Music</a>
                     <div class="icons">
                         8 <button><i class="fa fa-thumbs-o-up"></i></button> 
                         0 <button><i class="fa fa-thumbs-o-down"></i></button>
-                        3 <i class="fa fa-comment-o" aria-hidden="true"> comments</i>
+                        3 <button onclick="comment5(1)"><i class="fa fa-comment-o" aria-hidden="true"> comments</i></button>
                     </div>
                 </li>
                     <ul class="comment">
@@ -127,12 +195,23 @@
                     </ul>
             <hr>   
             </ul>
+            <form id="comment5" action="" method="">
+                        
+                    <div class="field">
+                            <textarea class="textinput" placeholder="Type your comment here...." ></textarea>
+                    </div>
+                    <div class="field">
+                    <button class="button">POST</button>
+                    </div>
+                 
+                </form>
         </div>
 
         <footer class="footer">
-                      <strong> © Questioner 2019</b></strong> 
+                      <p><strong> © Questioner 2019</b></strong> </p>
         </footer>
-      
+        
     </div> 
+    <script src="myscripts.js"></script>
   </body>
 </html>
