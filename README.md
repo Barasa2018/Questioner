@@ -14,7 +14,7 @@ No framework has been used.
 
 ### No implimentation has not yet been made to the UIs
 
-##Testing the UIs
+## Testing the UIs
 
 * Clone this repo https://github.com/Barasa2018/Questioner.git to your local machine
 * Cd into the repo
