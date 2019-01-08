@@ -16,7 +16,7 @@ No framework has been used.
 
 ## Testing the UIs
 
-* Clone this repo https://github.com/Barasa2018/Questioner.git to your local machine
+* Clone this [repo](https://github.com/Barasa2018/Questioner.git) to your local machine
 * Cd into the repo
 * Open any file in your browser
 
